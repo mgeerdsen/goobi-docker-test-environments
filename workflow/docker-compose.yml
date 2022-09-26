@@ -19,6 +19,8 @@ services:
       # - type: bind
       #   source: /local/path/to/my/goobi/config
       #   target: /opt/digiverso/goobi/config
+    environment:
+      - DB_SERVER=goobi-workflow-db
     depends_on: 
       - goobi-workflow-db
 
