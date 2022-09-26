@@ -33,8 +33,13 @@ write_files:
 
 package_update: true
 package_upgrade: true
+
+
+# the user goobi, you can change github account name to use your ssh key
+# or use a hashed password e.g.
+# passwd: $6$LnEl2D4LZwlcdxoH$HdKml9DWG49QCfhlt5SKil80Q7O5FA1ccJpRUDvFITg6LslD0jQq1LOyikGBCKZDsQZFDQGIqf1fXmJzjK5qO.
 users:
-  - name: matthias
+  - name: goobi
     ssh_import_id: gh:mgeerdsen
     sudo:  ALL=(ALL) NOPASSWD:ALL
     shell: /bin/bash
