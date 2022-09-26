@@ -23,6 +23,7 @@ services:
       - DB_SERVER=goobi-workflow-db
     depends_on: 
       - goobi-workflow-db
+    restart: unless-stopped
 
   goobi-workflow-db:
     image: mariadb:10.1
@@ -38,6 +39,7 @@ services:
       - type: volume
         source: goobi_dbdata
         target: /var/lib/mysqldata
+    restart: unless-stopped
 
 
 volumes:
